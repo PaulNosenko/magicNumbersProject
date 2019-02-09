@@ -25,7 +25,7 @@ public class Main {
 			byte[] b = Files.readAllBytes(f.toPath());
 			sb = new StringBuilder();
 			for(int i=0; i<9; i++) {
-				sb.append(String.format("%02X", b[i]));
+				sb.append(String.format("%02X ", b[i]));
 			}
 			System.out.println(sb.toString());
 		}else {
