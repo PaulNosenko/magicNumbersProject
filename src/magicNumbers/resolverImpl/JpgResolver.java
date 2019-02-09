@@ -1,7 +1,6 @@
-package magicNumbers.utils;
+package magicNumbers.resolverImpl;
 
 import magicNumbers.resolverAbs.Resolver;
-import magicNumbers.resolverImpl.PngResolver;
 
 public class JpgResolver extends Resolver{
 	public static String jpgMagicCode1 = "FF D8 FF DB";

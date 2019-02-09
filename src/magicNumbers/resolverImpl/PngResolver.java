@@ -1,7 +1,6 @@
 package magicNumbers.resolverImpl;
 
 import magicNumbers.resolverAbs.Resolver;
-import magicNumbers.utils.JpgResolver;
 
 public class PngResolver extends Resolver{
 	public static String pngMagicCode = "89 50 4E 47 0D 0A 1A 0A";
