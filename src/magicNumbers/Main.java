@@ -15,8 +15,11 @@ public class Main {
 		String fileName = sc.nextLine();
 
 		File f = new File(fileName);
+		
 		String ext = Utility.getExtension(f);
 		StringBuilder sb = null;
+		
+		String verdict = "";
 		
 		if(f.exists()) {
 			byte[] b = Files.readAllBytes(f.toPath());
