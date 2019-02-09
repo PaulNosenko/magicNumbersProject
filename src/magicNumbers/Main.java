@@ -8,6 +8,7 @@ import magicNumbers.exception.UnresolvableExtensionException;
 import magicNumbers.factory.ResolverFactory;
 import magicNumbers.utils.Utility;
 
+
 public class Main {
 	private static Scanner sc;
 
@@ -19,10 +20,10 @@ public class Main {
 
 		File f = new File(fileName);
 
-		String ext = Utility.getExtension(f);
+		String ext = Utility.getExtension(new File(fileName));
 		StringBuilder sb = null;
+		String verdict;
 
-		String verdict = "";
 
 		if (f.exists()) {
 			byte[] b = Files.readAllBytes(f.toPath());
@@ -33,11 +34,11 @@ public class Main {
 				}
 				verdict = ResolverFactory.resolveType(sb.toString(), ext);
 				System.out.println(verdict);
-			} catch (UnresolvableExtensionException ex) {
-
+			} catch (UnresolvableExtensionException | ArrayIndexOutOfBoundsException e) {
+				System.out.println(e.getMessage());
 			}
 		} else {
-			System.out.println("File '" + fileName + "' not found. Try once again");
+			System.out.println("File '" + fileName + "' not found. Try once again ");
 		}
 	}
 }
