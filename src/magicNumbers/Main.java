@@ -50,7 +50,7 @@ public class Main {
 			} else {
 				System.out.println("File '" + fileName + "' not found. Try once again ");
 			}
-			System.out.println("Wuold you like to try it once again? (Y/N)");
+			System.out.println("Would you like to try it once again? (Y/N)");
 			answer = sc.nextLine();
 		} while (answer.equalsIgnoreCase("Y"));
 		System.out.println("Have a nice day!");
